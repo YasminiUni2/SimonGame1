@@ -1,0 +1,33 @@
+body{margin:0;font-family:"Courier New",monospace;background:#000;color:#fff;text-align:center}
+.title{margin-top:20px}
+
+/* Score */
+#scoreBar{font-size:1.5rem;margin-top:6px;margin-bottom:6px}
+#score{font-weight:bold}
+
+/* Board */
+#board{position:relative;width:70vmin;height:70vmin;margin:10px auto;border-radius:50%;overflow:hidden;box-shadow:0 0 25px #0ff}
+.pad{position:absolute;width:50%;height:50%;cursor:pointer;transition:filter .15s}
+.pad:active,.pad.lit{filter:brightness(180%)}
+.green{background:#00a74a;border-radius:100% 0 0 0;top:0;left:0}
+.red{background:#9f0f17;border-radius:0 100% 0 0;top:0;left:50%}
+.yellow{background:#cca707;border-radius:0 0 0 100%;top:50%;left:0}
+.blue{background:#094a8f;border-radius:0 0 100% 0;top:50%;left:50%}
+
+/* Center (blank) */
+#center{position:absolute;top:50%;left:50%;width:40%;height:40%;transform:translate(-50%,-50%);background:#000;border-radius:50%}
+
+/* Game Over Overlay */
+#overlay{position:fixed;top:0;left:0;width:100vw;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(0,0,0,.75);z-index:10}
+#overlay.hidden{display:none}
+#overlay h2{margin:0;font-size:4rem;font-weight:900;color:#f00;text-transform:uppercase;letter-spacing:2px}
+#overlay p{margin-top:10px;font-size:1.2rem;color:#fff}
+
+/* Countdown Overlay */
+#countdown{position:fixed;top:0;left:0;width:100vw;height:100vh;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.6);z-index:9}
+#countdown.hidden{display:none}
+#countdown span{font-size:6rem;font-weight:900;color:#f00}
+
+/* Button */
+#startBtn{padding:10px 25px;margin-bottom:30px;font-size:1rem;background:#111;color:#fff;border:1px solid #555;border-radius:4px}
+#startBtn:hover{background:#222}
